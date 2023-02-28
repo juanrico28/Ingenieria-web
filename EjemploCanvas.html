@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Figuras geometricas</title>
+        <style>
+            body{
+                background-color: #EBDEF0 ;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>   
+<body>
+    <h1><center>Figuras geometricas con canvas</center></h1>
+    <p>A continuación vamos a poder ver distintas figuras geométricas programadas a través de Html y JavaScript que es el código que usualmente se usa para Canvas, y su funcionalidad trata de ser un contenedor de figuras geométricas.</p>
+
+    <table class="default">
+        <tr>
+        <th>Rectangulo</th>
+        <th>Circulo</th>
+        <th>Lineas</th>
+        </tr>
+        <tr>
+        <td>
+            <canvas id="Rectangulo" width="200" height="100"
+            style="border:6px solid #c389c5;" >
+        
+            </canvas>
+        
+            <script>
+            var canvas = document.getElementById("Rectangulo");
+            var ctx = canvas.getContext("2d");
+            ctx.fillStyle = "#5DADE2";
+            ctx.fillRect(20,20,160,60);
+            </script>
+        </td>
+        <td>
+            <canvas id="Circulo" width="200" height="100"
+            style="border:3px solid #27AE60;">
+            </canvas>
+        
+            <script>
+            var canvas = document.getElementById("Circulo");
+            var ctx = canvas.getContext("2d");
+            ctx.beginPath();
+            ctx.arc(95,50,40,0,2*Math.PI);
+            ctx.stroke();
+            </script> 
+        </td>
+        <td>
+            <canvas id="+" width="200" height="100"
+            style="border:5px solid #5499C7;">
+            </canvas>
+            
+            <script>
+            
+            var canvas = document.getElementById("+");
+            var ctx = canvas.getContext("2d");
+            ctx.moveTo(100,0);
+            ctx.lineTo(100,200);
+            ctx.stroke();
+            
+            </script>
+            <script>
+            
+            var canvas = document.getElementById("+");
+            var ctx = canvas.getContext("2d");
+            ctx.moveTo(0,50);
+            ctx.lineTo(200,50);
+            ctx.stroke();
+            
+            </script>
+        </td>
+        </tr>
+        <tr>
+
+            <td>
+                <canvas id="Rectangulo2" width="200" height="100"
+                style="border: 10px solid #45B39D;"
+                >
+                </canvas>
+                <script>
+                var canvas = document.getElementById("Rectangulo2");
+                var ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#F1948A";
+                ctx.fillRect(0,0,400,300);
+                ctx.stroke();
+                </script>
+            </td>
+        
+            <td><center>
+                    <canvas id="Cuadrado" width="100" height="100"
+                    style="border: 3px solid #2ECC71">
+                    Your browser does not support the canvas element.
+                    </canvas>
+                    
+                    <script>
+                    var canvas = document.getElementById("Cuadrado");
+                    var ctx = canvas.getContext("2d");
+                    ctx.beginPath();
+                    ctx.arc(50,50,50,0,2*Math.PI);
+                    ctx.stroke();
+                    </script>
+                </center>
+            </td>
+        
+            <td>
+                <canvas id="X" width="200" height="100"
+                style="border:10px solid #8E44AD;">
+                </canvas>
+                <script>
+                var canvas = document.getElementById("X");
+                var ctx = canvas.getContext("2d");
+                ctx.moveTo(200,0);
+                ctx.lineTo(0,100);
+                ctx.stroke();
+                </script>
+                <script>
+                var canvas = document.getElementById("X");
+                var ctx = canvas.getContext("2d");
+                ctx.moveTo(0,0);
+                ctx.lineTo(200,100);
+                ctx.stroke();
+                </script>
+            </td>
+        </tr>
+
+
+        
+    
+    </table>
+</body>
+</html>
